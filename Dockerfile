@@ -10,7 +10,7 @@ RUN playwright install-deps
 RUN apt-get update && apt-get upgrade -y
 RUN apt -qq update --fix-missing && \
     apt -qq install -y mediainfo
-
+RUN MKDIR /app/qbittorrent-nox
 COPY . .
 
 CMD ["bash", "start.sh"]
